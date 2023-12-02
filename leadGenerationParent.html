@@ -1,0 +1,78 @@
+<template>
+	<c-lead-generation-child onreview={handleReviewEvent} oninput={handleInput}></c-lead-generation-child>
+	<template if:true={parentFlag}>
+		<lightning-card title="Lead Information" icon-name="standard:lead"></lightning-card>
+		<div class="mainContainer" style="background-color:white; padding : 1%;display:flex; flex-direction : coloumn;">
+			<div class="infoDiv">
+				<div class="heading">
+					<h1>Lead Information</h1>
+				</div>
+				<b><u>Lead Full Name</u></b> : {leadFullName}
+				<br /><br />
+				<b><u>Lead Company</u></b> : {leadCompany}
+				<br /><br />
+				<b><u>Lead Status</u></b> : {leadStatus}
+				<br /><br />
+				<b><u>Lead Phone</u></b> : {leadPhone}
+				<br /><br />
+				<b><u>Lead Mobile</u></b> : {leadMobile}
+				<br /><br />
+				<b><u>Lead Fax</u></b> : {leadFax}
+				<br /><br />
+				<b><u>Lead Email</u></b> : {leadEmail}
+				<br /><br />
+				<b><u>Lead title</u></b> : {title}
+				<br /><br />
+				<b><u>Lead Source</u></b> : {leadsource}
+				<br /><br />
+				<b><u>Lead Website</u></b> : {website}
+				<br /><br />
+				<b><u>Lead Industry</u></b> : {industry}
+				<br /><br />
+				<b><u>Lead Annual Revenue</u></b> : {annualrevenue}
+				<br /><br />
+				<b><u>Lead No of Employees</u></b> : {noofemployees}
+				<br /><br />
+				<b><u>Lead Rating</u></b> : {rating}
+				<br /><br />
+			</div>
+			<div class="infoDiv">
+				<div class="heading">
+					<h1>Additional Information</h1>
+				</div>
+				<b><u>Lead Street</u></b> : {street}
+				<br /><br />
+				<b><u>Lead City</u></b> : {city}
+				<br /><br />
+				<b><u>Lead Postal</u></b> : {postal}
+				<br /><br />
+				<b><u>Lead State</u></b> : {state}
+				<br /><br />
+				<b><u>Lead Country</u></b> : {country}
+				<br /><br />
+				<b><u>Lead Product Interest</u></b> : {pdinterest}
+				<br /><br />
+				<b><u>Lead Generator</u></b> : {generators}
+				<br /><br />
+				<b><u>Lead SIC Code</u></b> : {siccode}
+				<br /><br />
+				<b><u>Lead Primary</u></b> : {primary}
+				<br /><br />
+				<b><u>Lead No of locations</u></b> : {locations}
+				<br /><br />
+				<b><u>Description</u></b> : {description}
+			</div>
+		</div>
+		<div class="buttons" style="padding-left:2%; background-color : white;">
+			<lightning-button variant="neutral" label="Back" title="titleName" onclick={handleBack}>
+			</lightning-button>
+			<lightning-button variant="brand" label="Save" title="titleName" onclick={handleSave}>
+			</lightning-button>
+		</div>
+	</template>
+	<template if:true={successflag}>
+		<div class="SuccessDiv">
+			<h1 style="color:black; font-weight : bold">Lead Generated Successfully</h1>			
+		</div>
+	</template>
+</template>
