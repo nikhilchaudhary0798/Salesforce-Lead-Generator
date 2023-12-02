@@ -1,0 +1,49 @@
+.heading
+{
+	color: black;
+	padding: 1%;
+	font-weight: bold;
+	font-size: large;
+	padding-bottom: 0;
+}
+
+/* first three sections */
+.inputDiv
+{
+	color : black;
+	display : flex; 
+	flex-direction:coloumn;
+	justify-content: space-between;
+	padding:1%;
+}
+
+.input
+{
+	width:100%;
+	border-radius: 4px ;
+}
+
+.inputClass
+{
+	width : 22%;
+}
+
+/* forth section */
+.inputDiv4
+{
+	display:flex; 
+	flex-direction : coloumn; 
+	color:black;
+	padding:1%;
+}
+
+.inputClass4
+{
+	width:22%;
+	margin-left: 4%;
+}
+
+.inputClass04
+{
+	width:22%;
+}

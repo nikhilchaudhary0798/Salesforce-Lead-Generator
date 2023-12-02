@@ -1,0 +1,166 @@
+<template>
+	<template if:true={childFlag1}>
+		<div class="childContainer" style="background-color: white; padding : 1%;margin:1%">
+			<lightning-card variant="Narrow" title="Lead Generator" icon-name="standard:campaign">
+				<div class="heading">
+					<h1>Lead Information</h1>
+				</div>
+				<div class="inputDiv">
+					<div class="inputClass">
+						<lightning-input label="First Name" value={firstName} placeholder="Enter First Name.."
+							class="input" data-id="fname" onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="Last Name" value={lastName} placeholder="Enter Last Name.."
+							class="input" data-id="lname" onchange={handleInput} required="true"></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="Company Name" value={companyName} placeholder="Enter Company Name.."
+							class="input" data-id="Cname" onchange={handleInput} required="true"></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-combobox label="Status" value={status} placeholder="Select Status"
+							options={options} data-id="status" onchange={handleInput} required></lightning-combobox>
+					</div>
+				</div>
+				<!-- second div -->
+				<div class="inputDiv">
+					<div class="inputClass">
+						<lightning-input label="Phone" value={phone} placeholder="Enter Phone.." class="input"
+							data-id="phone" onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="Mobile" value={mobile} placeholder="Enter Mobile.." class="input"
+							data-id="mobile" onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="Fax" value={fax} placeholder="Enter Fax.." class="input" data-id="fax"
+							onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="Email" value={email} placeholder="Enter Email.." class="input"
+							data-id="email" onchange={handleInput}></lightning-input>
+					</div>
+				</div>
+				<!-- third div -->
+				<div class="inputDiv">
+					<div class="inputClass">
+						<lightning-input label="Title" placeholder="Enter Title.." class="input" data-id="title"
+							onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="Lead Source" value={leadsource} placeholder="Enter Lead Source.."
+							class="input" data-id="leadsource" onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="Website" value={website} placeholder="Enter Website.." class="input"
+							data-id="website" onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-combobox label="Industry" value={industry} placeholder="Select Industry"
+							options={industryOptions} data-id="industry" onchange={handleInput}></lightning-combobox>
+					</div>
+				</div>
+				<!-- forth div -->
+				<div class="inputDiv4" style="display:flex; flex-direction : coloumn; color:black;padding:1%">
+					<div class="inputClass04">
+						<lightning-input label="Annual Revenue" value={annualrevenue}
+							placeholder="Enter Annual Revenue.." class="input4" data-id="annualrevenue"
+							onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass4">
+						<lightning-input label="No of Employees" value={noofemployees}
+							placeholder="Enter No of Employees.." class="input4" data-id="employees"
+							onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass4">
+						<lightning-combobox label="Rating" value={rating} placeholder="Select Rating"
+							options={ratings} data-id="rating" onchange={handleInput}></lightning-combobox>
+					</div>
+				</div>
+				<div class="buttons" style="padding-left:1%;">
+					<lightning-button variant="brand" label="Next" title="titleName" onclick={handleNext}>
+					</lightning-button>
+				</div>
+			</lightning-card>
+		</div>
+	</template>
+	<template if:true={childFlag2}>
+		<div class="childContainer" style="background-color: white; padding : 1%;margin:1%">
+			<lightning-card variant="Narrow" title="Lead Generator" icon-name="standard:campaign">
+				<div class="heading">
+					<h1>Address Information</h1>
+				</div>
+				<div class="inputDiv">
+					<div class="inputClass">
+						<lightning-input label="Street" value={street} placeholder="Enter Street.." class="input"
+							data-id="street" onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="City" value={city} placeholder="Enter City.." class="input"
+							data-id="city" onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="Enter State" value={state} placeholder="Enter State.." class="input"
+							data-id="state" onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="Postal Code" value={postal} placeholder="Enter ZIP/Postal Code.."
+							class="input" data-id="postal" onchange={handleInput}></lightning-input>
+					</div>
+				</div>
+				<div class="inputDiv">
+					<div class="inputClass">
+						<lightning-input label="Country" placeholder="Enter Country.." class="input" data-id="country"
+							onchange={handleInput}></lightning-input>
+					</div>
+				</div>
+				<div class="heading">
+					<h1>Additional Information</h1>
+				</div>
+				<div class="inputDiv">
+					<div class="inputClass">
+						<lightning-input label="Product interest" value={pdinterest}
+							placeholder="Enter Product interest.." class="input" data-id="pdinterest"
+							onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="Current Generator(s)" value={generators}
+							placeholder="Enter Current Generator.." class="input" data-id="generator"
+							onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-input label="Enter SIC Code" value={siccode} placeholder="Enter SIC Code.."
+							class="input" data-id="sic" onchange={handleInput}></lightning-input>
+					</div>
+					<div class="inputClass">
+						<lightning-combobox label="Primary" value={primaryValue} placeholder="Select Primary"
+							options={primaryOptions} data-id="primary" onchange={handleInput}></lightning-combobox>
+					</div>					
+				</div>
+				<div class="inputDiv">
+					<div class="inputClass">
+						<lightning-input label="Number of Locations" value={locations}
+							placeholder="Enter No of Locations.." class="input" data-id="locations"
+							onchange={handleInput}></lightning-input>
+					</div>
+				</div>
+				<div class="heading">
+					<h1>Description</h1>
+				</div>
+				<div class="inputDiv">
+					<div class="inputClass">
+						<lightning-textarea label="Description" value={description} placeholder="Enter Description.."
+							class="input" data-id="description" onchange={handleInput}></lightning-textarea>
+					</div>
+				</div>
+				<div class="buttons" style="padding-left:1%;">
+					<lightning-button variant="neutral" label="Previous" title="titleName" onclick={handlePrevious}>
+					</lightning-button>
+					<lightning-button variant="brand" label="Review" title="titleName" onclick={handleReview}>
+					</lightning-button>
+				</div>
+			</lightning-card>
+		</div>
+	</template>
+</template>
